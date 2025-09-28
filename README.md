@@ -144,7 +144,7 @@ vistagram/
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd my-mern-app
+   cd Vistagram_App
    ```
 
 2. **Install dependencies and start the application**
@@ -153,9 +153,9 @@ vistagram/
    npm start
    ```
    
-   This will automatically install dependencies for both client and server, then start both the frontend (port 3001) and backend (port 5001) concurrently.
+   This will automatically install dependencies for both client and server, then start both the frontend (port 3000) and backend (port 5000) concurrently. Run it on [localhost:3000](http://localhost:3000/)
 
-3. **Seed the database (optional)**
+3. **Seed the database (Done by Defualt)**
    ```bash
    npm run seed
    ```
