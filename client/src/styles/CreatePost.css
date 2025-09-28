@@ -1,0 +1,270 @@
+/* CreatePost.css - Create post component styles */
+
+.create-post-section {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+  animation: fadeInScale 0.6s ease-out;
+}
+
+.create-post-section:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.create-post-section h2 {
+  font-size: 1.5rem;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* Username Section */
+.username-section {
+  margin-bottom: 1.5rem;
+}
+
+.username-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  will-change: transform;
+}
+
+.username-input:focus {
+  outline: none;
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+/* Upload Options */
+.upload-options {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.upload-options .btn {
+  flex: 1;
+  min-width: 180px;
+  padding: 1rem 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Camera Container */
+.camera-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  animation: zoomIn 0.5s ease-out;
+}
+
+.camera-preview {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: var(--border-radius);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  background: #000;
+  box-shadow: var(--shadow-heavy);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.camera-controls {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Image Preview */
+.image-preview {
+  animation: slideInScale 0.6s ease-out;
+}
+
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.preview-image {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: var(--border-radius);
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-light);
+  transition: var(--transition);
+}
+
+.preview-image:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-heavy);
+}
+
+/* Upload Form */
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.caption-input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius);
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  font-size: 1rem;
+  resize: vertical;
+  min-height: 100px;
+  transition: var(--transition);
+  font-family: inherit;
+  will-change: transform;
+}
+
+.caption-input:focus {
+  outline: none;
+  border-color: #667eea;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.caption-counter {
+  text-align: right;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-top: -0.5rem;
+}
+
+.upload-buttons {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Hidden file input */
+input[type="file"] {
+  display: none;
+}
+
+/* File upload label styling */
+label[for="file-upload"] {
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .create-post-section {
+    padding: 1.5rem;
+  }
+  
+  .upload-options,
+  .camera-controls,
+  .upload-buttons {
+    flex-direction: column;
+  }
+  
+  .upload-options .btn,
+  .camera-controls .btn,
+  .upload-buttons .btn {
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .camera-preview {
+    max-width: 100%;
+  }
+  
+  .create-post-section {
+    padding: 1.25rem;
+    margin: 0 -0.5rem 1.5rem -0.5rem;
+  }
+}
+/* Add these styles to your CreatePost.css file */
+
+.login-prompt {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-light);
+  animation: fadeInScale 0.6s ease-out;
+}
+
+.login-prompt h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+}
+
+.login-prompt p {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.login-prompt-icon {
+  font-size: 4rem;
+  opacity: 0.6;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive design for login prompt */
+@media (max-width: 768px) {
+  .login-prompt {
+    padding: 2rem 1.5rem;
+  }
+  
+  .login-prompt h2 {
+    font-size: 1.5rem;
+  }
+  
+  .login-prompt p {
+    font-size: 1rem;
+  }
+  
+  .login-prompt-icon {
+    font-size: 3rem;
+  }
+}
