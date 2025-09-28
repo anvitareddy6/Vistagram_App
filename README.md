@@ -14,10 +14,6 @@ A full-stack web application that allows users to capture, upload, and share ima
 - [Performance Optimizations](#performance-optimizations)
 - [Cross-Browser Compatibility](#cross-browser-compatibility)
 - [Security Features](#security-features)
-- [Testing](#testing)
-- [Deployment](#deployment)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
