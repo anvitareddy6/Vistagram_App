@@ -183,8 +183,8 @@ vistagram/
 ## Environment Configuration
 
 ### Development
-- Frontend: http://localhost:3001
-- Backend: http://localhost:5001
+- Frontend: http://localhost:3000
+- Backend: http://localhost:5000
 - Database: MongoDB Atlas
 
 ## API Documentation
