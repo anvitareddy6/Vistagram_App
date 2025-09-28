@@ -1,0 +1,43 @@
+{
+  "name": "vistagram",
+  "version": "1.0.0",
+  "description": "A full-stack Instagram-like app for Points of Interest",
+  "main": "server/server.js",
+"scripts": {
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "server": "cd server && npm run dev",
+  "client": "cd client && npm start",
+  "build": "cd client && npm run build",
+  "postinstall": "npm run install-all",
+  "install-server": "cd server && npm install",
+  "install-client": "cd client && npm install",
+  "install-all": "npm run install-server && npm run install-client",
+  "start": "concurrently \"cd server && npm start\" \"cd client && npm start\"",
+  "test": "cd client && npm test",
+  "seed": "cd server && node scripts/seedData.js"
+},
+  "keywords": [
+    "mern",
+    "instagram",
+    "poi",
+    "social",
+    "photography"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cookie-parser": "^1.4.7",
+    "express-rate-limit": "^8.1.0",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "moment": "^2.30.1",
+    "multer": "^2.0.2",
+    "react-router-dom": "^7.9.2",
+    "react-toastify": "^11.0.5"
+  }
+}
